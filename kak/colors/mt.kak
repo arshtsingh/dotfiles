@@ -54,9 +54,9 @@ face global LineNumbers        rgb:FFFFFF@Default
 face global LineNumberCursor   +b@LineNumbers
 face global LineNumbersWrapped +d@LineNumbers
 face global MenuForeground     rgb:5C8EC7,default+b@MenuBackground
-face global MenuBackground     default,rgb:2BA84A@Default
+face global MenuBackground     default,rgb:ffbab9@Default
 face global MenuInfo           +i
-face global Information        default,rgb:2BA84A@Default
+face global Information        default,rgb:ffbab9@Default
 face global Error              rgb:E07093+b@Default
 face global StatusLine         @Default
 face global StatusLineMode     rgb:BB8E67@Default

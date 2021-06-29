@@ -4,6 +4,8 @@ evaluate-commands %sh{
   done
 }
 
+colorscheme mt
+
 eval %sh{kak-lsp --kakoune -s $kak_session}
 hook global WinSetOption filetype=(rust|python|go|javascript|typescript) %{
     lsp-enable-window
