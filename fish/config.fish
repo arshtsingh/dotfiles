@@ -9,6 +9,7 @@ set -x PATH $PATH "$HOME/go/bin"
 set -x PATH $PATH "$HOME/.local/bin/"
 set -x PATH $PATH "$HOME/.node_modules/bin"
 set -x PATH $PATH "$HOME/.poetry/bin"
+set -x PATH $PATH "/Users/arshsingh/Library/Python/3.8/bin"
 set -x PATH $PATH "/opt/homebrew/bin"
 set -x FZF_OPTS \
   --color=16 \
@@ -16,13 +17,17 @@ set -x FZF_OPTS \
   --tiebreak=length,end \
   --bind=tab:down,shift-tab:up          # fzf
 
+set -x EXA_COLORS "'fi=38;5;015:di=38;5;038:ex=38;5;048:ur=38;5;015:uw=38;5;203:ux=38;5;048:ue=38;5;048:gr=38;5;015:gw=38;5;203:gx=38;5;048:tr=38;5;015:tw=38;5;203:tx=38;5;048:sn=38;5;255:sb=38;5;255:uu=38;5;255:un=38;5;214:gu=38;5;255:gn=38;5;214:da=38;5;255:hd=4;38;5;015"
+
 alias subl "open -a Subl"
 alias k "kak"
-alias l "la -l"
+alias ls='exa --classify --across'
+alias l="exa --classify --long --group"
+alias llg='exa --classify --long --grid --group'
+alias tree="exa --classify --tree"
 alias cp "cp -p"
-alias tree "tree -C"
 alias o "__open"
-
+alias weathr "curl v2.wttr.in"
 
 function wiki_grep --description "grep wiki files for content"
   command rg $argv ~/wiki \
@@ -215,3 +220,7 @@ bind \cs __fish_prepend_sudo
 bind \cr __fzf_search_history
 bind \> __bound_nextd
 bind \< __bound_prevd
+fish_add_path /usr/local/opt/python@3.8/bin
+status is-interactive; and pyenv init --path | source
+
+
