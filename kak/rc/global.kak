@@ -3,7 +3,6 @@ set global indentwidth 2
 
 set-option global autoreload true
 set-option global scrolloff 3,0
-set-option global grepcmd "rg -niL --column"
 set-option -add global ui_options ncurses_status_on_top=yes
 
 addhl global/ wrap -word -marker "↳ "

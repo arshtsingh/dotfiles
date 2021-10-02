@@ -1,0 +1,69 @@
+env:
+  # This value is used to set the `$TERM` environment variable for
+  # each instance of Alacritty. If it is not present, alacritty will
+  # check the local terminfo database and use `alacritty` if it is
+  # available, otherwise `xterm-256color` is used.
+  TERM: xterm-256color
+
+window:
+  padding:
+    x: 10
+    y: 10
+  decorations: none
+  dimensions:
+    columns: 140
+    lines: 38
+  opacity: .95
+
+cursor:
+  # Block Underline or Beam
+  style: Underline
+
+font:
+  normal:
+    family: Menlo
+  size: 13
+
+  use_thin_strokes: true
+
+shell:
+  program: /usr/local/bin/fish
+  args:
+    - --login
+
+colors:
+  primary:
+    background: '#0A0E14'
+    foreground: '#B3B1AD'
+  cursor:  # uncomment if you don't want reverse
+    text: '#1e2227'
+    cursor: '#d9d9d9'
+  normal:
+    black: '#1e2227'
+    red: '#e07093'
+    green: '#8bbe67'
+    yellow: '#bb8e67'
+    blue: '#5c8ec7'
+    magenta: '#8b5fc7'
+    cyan: '#5cbe97'
+    white: '#d9d9d9'
+  bright:
+    black: '#30343c'
+    red: '#dfb4c9'
+    green: '#b1c6ac'
+    yellow: '#c3b470'
+    blue: '#a0b4cf'
+    magenta: '#b1a3df'
+    cyan: '#a0c4bd'
+    white: '#ffffff'
+
+mouse_bindings:
+  - { mouse: Middle, action: PasteSelection }
+
+key_bindings:
+  - { key: N, mods: Command, action: SpawnNewInstance }
+  - { key: V, mods: Command, action: Paste }
+  - { key: C, mods: Command, action: Copy }
+  - { key: H, mods: Command, action: Hide }
+  - { key: Q, mods: Command, action: Quit }
+  - { key: W, mods: Command, action: Quit }
